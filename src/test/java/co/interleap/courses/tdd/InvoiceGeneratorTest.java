@@ -7,12 +7,12 @@ import static org.junit.Assert.assertEquals;
 public class InvoiceGeneratorTest {
 
     @Test
-    public void zeroDistanceAndTime() {
+    public void shouldCalculateFareForZeroDistanceAndTime() {
         assertEquals(0, new InvoiceGenerator().fare(0, 0));
     }
 
     @Test
-    public void fiveKmAndTwentyMin() {
+    public void shouldCalculateFareForFiveKmAndTwentyMin() {
         assertEquals(70, new InvoiceGenerator().fare(5, 20));
     }
 
