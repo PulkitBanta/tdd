@@ -25,4 +25,9 @@ public class VowelCounterTest {
     public void vowelAndConsonantLowerCase() {
         assertEquals(2, new VowelCounter().count("hello"));
     }
+
+    @Test
+    public void vowelAndConsonantMixedCase() {
+        assertEquals(7, new VowelCounter().count("HeLlO how ArE yoU"));
+    }
 }

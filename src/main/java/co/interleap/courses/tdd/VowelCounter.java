@@ -11,7 +11,7 @@ public class VowelCounter {
     public int count(String inp) {
         int vowelFound = 0;
 
-        for (char ch : inp.toCharArray()) {
+        for (char ch : inp.toLowerCase().toCharArray()) {
             if (isVowel(ch))
                 vowelFound++;
         }
