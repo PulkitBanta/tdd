@@ -7,8 +7,14 @@ public class InvoiceGenerator {
     public static final int FARE_PER_KM = 10;
     public static final int FARE_PER_MIN = 1;
 
-    public int create(List<Ride> rides) {
-        return fare(rides.get(0));
+    public double create(List<Ride> rides) {
+        double totalFare = 0;
+
+        for (Ride ride : rides) {
+            totalFare += fare(ride);
+        }
+
+        return totalFare;
     }
 
     public int fare(Ride ride) {
