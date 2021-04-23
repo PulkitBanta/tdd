@@ -4,7 +4,13 @@ import java.util.List;
 
 public class InvoiceGenerator {
 
-    public double create(List<Ride> rides) {
+    private List<Ride> rides;
+
+    InvoiceGenerator(List<Ride> rides) {
+        this.rides = rides;
+    }
+
+    public double totalFare() {
         double totalFare = 0;
 
         for (Ride ride : rides) {
@@ -14,4 +20,11 @@ public class InvoiceGenerator {
         return totalFare;
     }
 
+    public int totalRides() {
+        return this.rides.size();
+    }
+
+    public double averageFarePerRide() {
+        return totalFare() / totalRides();
+    }
 }
